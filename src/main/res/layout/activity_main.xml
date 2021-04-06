@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tV1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="25dp"
+        android:textSize="20sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="20dp"
+        android:hint="Enter your text "
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/bold"
+        android:background="@color/term_yellow"
+        app:layout_constraintBottom_toTopOf="@+id/inputMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tV2" />
+
+    <TextView
+        android:id="@+id/tV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/bold"
+        android:hint="CryptoCaesar"
+
+        android:padding="20dp"
+        android:textColor="#0C0C0C"
+        android:textSize="29sp"
+        app:layout_constraintBottom_toTopOf="@+id/tV1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEncrypt"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@android:color/black"
+        android:fontFamily="@font/bold"
+        android:text="Encrypt"
+        android:textColor="@android:color/white"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnDecrypt"
+        app:layout_constraintEnd_toStartOf="@+id/btnDecrypt"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+        android:id="@+id/btnDecrypt"
+        android:layout_width="165dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="90dp"
+        android:layout_marginEnd="31dp"
+        android:background="@android:color/black"
+        android:text="Decrypt"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnEncrypt"
+        app:layout_constraintTop_toBottomOf="@+id/keyDT"/>
+    <EditText
+        android:id="@+id/inputMessage"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/regular"
+        android:hint="Your Message "
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/ciphEdt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tV1"/>
+    <EditText
+        android:id="@+id/ciphEdt"
+        android:layout_width="356dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:fontFamily="@font/regular"
+        android:layout_marginBottom="17dp"
+        android:hint="Cipher Text "
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/keyDT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputMessage"/>
+    <EditText
+        android:id="@+id/keyDT"
+        android:layout_width="356dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:fontFamily="@font/regular"
+        android:layout_marginBottom="21dp"
+        android:hint="Key 1 to 25"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnDecrypt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ciphEdt"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
